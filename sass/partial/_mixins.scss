@@ -1,0 +1,4 @@
+       
+    @mixin vendorPrefix($property,$value){
+        $property:$value;
+    }

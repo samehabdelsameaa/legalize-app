@@ -1,0 +1,761 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <link rel="icon" href="">
+        <title> app4legal </title>
+        <link href="https://fonts.googleapis.com/css?family=Lato|Quicksand" rel="stylesheet">
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/font-awesome.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="plugins/owlcarousel/assets/owl.carousel.min.css"/>
+        <link rel="stylesheet" href="plugins/owlcarousel/assets/owl.theme.default.css"/>
+        <link rel="stylesheet" href="plugins/bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.min.css"/>
+        <link rel="stylesheet" href="plugins/bootstrap-select/dist/css/bootstrap-select.css">
+        <link rel="stylesheet" href="plugins/summernote/dist/summernote.css" />
+        <link rel="stylesheet" href="plugins/aos/aos.css" />
+        <link rel="stylesheet" href="css/apl.css" />
+        <link rel="stylesheet" href="css/edit-inline.css" />
+        <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+          <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+          <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <![endif]-->
+    </head>
+    <body>
+        <header> 
+            <div class="navnar navbar-inverse navbar-fixed-top">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <button class="navbar-toggle collapsed" data-target="#main-nav" data-toggle="collapse">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <div class="navbar-brand">
+                            <button class="btn btn-action-sidebar" id="sidebar-toggle-btn"><i class="fa fa-ellipsis-v"></i></button>
+                            <a href="index.htnl">
+                                <img src="images/logo.png" alt="" class="img-responsive"/>
+                            </a>
+                        </div>                    
+                    </div>
+                    <nav id="main-nav" class="collapse navbar-collapse">
+                        <ul class="nav navbar-nav">
+                            <li class="dropdown">
+                                <a href="" class="dropdown-toggle" data-toggle="dropdown"> Dashboard <span class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#">My Dashboard</a></li>
+                                    <li><a href="#">Dashboard Management</a></li>
+                                    <li><a href="#">Matter Board</a></li>
+                                    <li><a href="#">Task Board</a></li>
+                                </ul>
+                            </li>
+                            <li><a href=""> Companies </a></li>
+                            <li><a href=""> Contacts </a></li>
+                            <li class="dropdown">
+                                <a href="" class="dropdown-toggle" data-toggle="dropdown"> Matters <span class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#">Matters</a></li>
+                                    <li><a href="#">Litigation Cases</a></li>
+                                    <li class="divider"></li>
+                                    <li><a href="#">Hearings</a></li>
+                                </ul>
+                            </li>
+                            <li><a href=""> Tasks </a></li>
+                            <li><a href=""> Money </a></li>
+                            <li><a href=""> Docs </a></li>
+                        </ul>
+                        
+                        <div class="btn-group col-md-1">
+                            <button type="button" class="btn btn-info btn-add-action" data-toggle="dropdown">
+                                 <i class="fa fa-plus"></i> Add <span class="caret" ></span> 
+                            </button>
+                            <ul class="dropdown-menu pull-right">
+                              <li><a href="" data-toggle="modal" data-target="#mymodel"> Contact </a></li>
+                              <li><a href="#"> Matter </a></li>
+                              <li><a href="#"> Delete </a></li>
+                              <li><a href="#"> Partners shares </a></li>
+                              <li><a href="#"> Show SLA Elapsed time </a></li>
+                              <li><a href="#"> Convert to Ligitation </a></li>
+                            </ul>
+                        </div>
+                        <div class="col-md-2">
+                            <div class="search-box">
+                                <input type="text" class="universal-search-box form-control" placeholder="Universal Search .." />
+                                <span><i class="fa fa-search"></i></span>
+                            </div>
+                        </div>
+                        <div class="dashboard-icons pull-right ">
+                            <span> <i class="fa fa-calendar"></i></span>
+                            <span> <i class="fa fa-comments"></i></span>
+                            <span> <i class="fa fa-bell"></i></span>
+                            <span> <i class="fa fa-clock-o"></i></span>
+                            <span> <i class="fa fa-user"></i></span>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </header>   
+
+        <section class="page-content">
+            <div class="content">
+                <div class="content-wrapper">
+                        <div class="breadcrumb-wrapper">
+                            <ol class="breadcrumb">
+                                <li><a href="#"><i class="fa fa-home"> </i> Home</a></li>
+                                <li><a href="#"><i class="fa fa-briefcase"> </i>  Matter</a></li>
+                                <li class="active">M0000001</li>
+                            </ol>
+                        </div>
+                    
+                        <div class="page-header-information">
+                            <div class="heading-page clearfix">
+                                <div class="matter-heading-title">
+                                    <span class="title-icon"> <i class="fa fa-briefcase"></i></span>
+                                    <p class="inline-edit" id="matter-title"> Review Contract Document With AB Bank  </p>
+                                </div>
+                                <div class="page-heading-buttons clearfix">
+                                    <button class="btn btn-edit-action"> Edit </button>
+                                    <button type="button" class="btn btn-danger btn-add-action-default" data-toggle="dropdown">
+                                         Pause  
+                                    </button>
+                                    <button type="button" class="btn btn-default btn-add-action-default" id="progressButton" data-toggle="dropdown">
+                                         Close  
+                                    </button>                                  
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btn-default btn-add-action-default" data-toggle="dropdown">
+                                             More <span class="caret" style="display: inline-block;margin-left: 10px;"></span> 
+                                        </button>
+                                        <ul class="dropdown-menu pull-right">
+                                            <li><a href="#"> Pending from customer  </a></li>
+                                            <li><a href="#"> Pending from legal </a></li>
+                                            <li><a href="#"> Need more information </a></li>
+                                        </ul>                                    
+                                    </div>
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btn-info btn-add-action" data-toggle="dropdown">
+                                             <i class="fa fa-cog" style="display: inline;font-size: 18px;"></i> <span class="caret" style="display: inline-block;margin-left: 10px;"></span> 
+                                        </button>
+                                        <ul class="dropdown-menu pull-right">
+                                          <li><a href="#"> Export To Word </a></li>
+                                          <li><a href="#"> Delete </a></li>
+                                          <li><a href="#"> Partners shares </a></li>
+                                          <li><a href="#"> Show SLA Elapsed time </a></li>
+                                          <li class="divider"></li>
+                                          <li><a href="#"> Privacy </a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="billing-info clearfix">
+                                <div class="col-md-2">
+                                    <div class="header-slider-title"><p> </p></div>
+                                </div>
+                                <div class="col-md-10">
+                                    <div class="owl-carousel owl-theme">
+                                        <div class="item" id="billing-information" data-widget-title="Billing Information">
+                                            <div class="col-md-3">
+                                                <div class="account-biliing-information box-info" data-toggle="popover" data-placement="left" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
+                                                    <img src="images/money-trust.png" alt="" />
+                                                    <div class="money-title"> 
+                                                        <h5> TRUST </h5>
+                                                        <p> 1500.00 USD </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <div class="account-biliing-information box-success">
+                                                    <img src="images/money-paid.png" alt="" />
+                                                    <div class="money-title"> 
+                                                        <h5> PAID </h5>
+                                                        <p> 750.00 USD </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <div class="account-biliing-information box-danger">
+                                                    <img src="images/money-due.png" alt="" />
+                                                    <div class="money-title"> 
+                                                        <h5> DUE </h5>
+                                                        <p> 0.00 USD </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <div class="account-biliing-information box-warning">
+                                                    <img src="images/money-billable.png" alt="" />
+                                                    <div class="money-title"> 
+                                                        <h5> BILLABLE </h5>
+                                                        <p> 0.00 USD </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="item" id="audit-info" data-widget-title="Audit Info">
+                                            <div class="audit-container">
+                                                <div class="col-md-1">
+                                                    <div class="audit-avatar">
+                                                        <img src="images/user.png" alt="" class="img-responsive" />
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-3">
+                                                    <div class="audit-username">
+                                                        <h4> sameh anwar </h4>
+                                                        <p> System Administrator</p>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-2">
+                                                    <span style="margin-top: 10px;display: block;"><i class="fa fa-clock-o"></i> Created On: </span>
+                                                    <!--<p> 2018-01-29 17:13 </p>-->
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <!--<span><i class="fa fa-pencil"></i> Modified On: </span>-->
+                                                    <p style="margin-top: 10px;"> 2018-03-08 15:41 </p>
+                                                </div>
+                                                <div class="col-md-2">
+                                                    <div class="audit-status">
+                                                        <button class="btn btn-danger button-danger-action-btn"> Inactive </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="item" id="audit-info" data-widget-title="Audit Info">
+                                            <div class="audit-container">
+                                                <div class="col-md-1">
+                                                    <div class="audit-avatar">
+                                                        <img src="images/user.png" alt="" class="img-responsive" />
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-3">
+                                                    <div class="audit-username">
+                                                        <h4> sameh anwar </h4>
+                                                        <p> System Administrator</p>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-2">
+                                                    <span style="margin-top: 10px;display: block;"><i class="fa fa-pencil"></i> Modified On: </span>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <p class="pull-left" style="margin-top: 10px;"> 2018-03-08 15:41 </p>
+                                                </div>
+                                                <div class="col-md-2">
+                                                    <div class="audit-status">
+                                                        <button class="btn btn-danger button-danger-action-btn"> Inactive </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            </div>
+                            
+                            <div class="matter-details-header clearfix">
+                                <div class="col-md-4">
+                                    <div class="matter-details-wrapper ">
+                                        <h3> Matter Contacts </h3>
+                                        <div class="matter-details-body">
+                                            <div class="table-responsive matter-data">
+                                                <table class="table">
+                                                    <tr>
+                                                        <td> <span> Client Name: </span></td>
+                                                        <td> <p class="inline-edit" id="client-name"> sameh anwar </p></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td> <span> Opponent Name: </span></td>
+                                                        <td> <p class="inline-edit" id="opponent-name"> <span class="edit-placeholder"> Click To Add </span> </p></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td> <span> Client Position: </span></td>
+                                                        <td> <p class="inline-edit" id="matter-opponent"> Position </p>  </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td> <span> Success Probability: </span></td>
+                                                        <td> <p class="inline-edit" id="matter-probability"> Position </p>  </td>
+                                                    </tr>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="matter-details-wrapper">
+                                        <h3> About Matter </h3>
+                                        <div class="matter-details-body">
+                                            <div class="table-responsive matter-data">
+                                                <table class="table">
+                                                    <tr>
+                                                        <td class="cell-caption"> <span> Area Of Practice: </span></td>
+                                                        <td> <p class="inline-edit" id="matter-practice"> Civil </p></td>
+                                                        <td class="cell-caption"> <span> Matter Status: </span></td>
+                                                        <td> <p class="inline-edit" id="matter-status"> Open </p></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="cell-caption"> <span> Matter Stage: </span></td>
+                                                        <td> <p class="inline-edit" id="matter-stage"> Dispute </p></td>
+                                                        <td class="cell-caption"> <span> Matter Priority: </span></td>
+                                                        <td> <p class="inline-edit" id="matter-priority"> Critical </p></td>
+                                                        
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="cell-caption"> <span> Matter File/Ref# </span></td>
+                                                        <td colspan="3"> <p class="inline-edit" id="matter-fileref">  <span class="edit-placeholder"> Click To Add </span> </p></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="cell-caption"> <span> Status Comment: </span></td>
+                                                        <td colspan="3"> <p class="inline-edit" id="matter-comment"> this matter is finished with a lot of data still hanged. </p></td>
+                                                    </tr>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        
+                    
+                        <div class="col-md-8">
+                            <div class="main-content clearfix">
+                                <div class="main-content-header">
+                                    <h2 class="page-heading-title"> Matter Details  </h2>
+                                    <div class="setting-buttons">
+                                        <button class="btn btn-toggle-section btn-collpase"><i class="fa fa-angle-down"></i> </button>
+                                    </div>
+                                </div>
+                                <div class="main-content-body">
+                                    <div class="inline-edit-group clearfix">
+                                        <span> Description </span>
+                                        <div class="inline-edit-container">
+                                            <p class="inline-edit" id="matter-details">firstName: company name
+                                                lastName: company name<br/>
+                                                organization: infosysta<br/>
+                                                email: ashraf.hassan@infosysta.com<br/>
+                                                phone: +201011978495<br/>
+                                                country: Egypt<br/>
+                                                type: Feedback<br/>
+                                                message: this is a test company<br/>
+                                                website page: contact us<br/>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="inline-edit-group clearfix">
+                                        <span>  Latest Development</span>
+                                        <div class="inline-edit-container">
+                                            <p class="inline-edit" id="matter-latest-development">
+                                                <span class="edit-placeholder"> Click To Add </span>
+                                            </p>
+                                        </div>
+                                    </div>
+<!--                                    <div class="matter-value-records">
+                                        <div class="col-md-4">
+                                            <h6> Matter Value <span> (USD):  </span> </h6> <p class="inline-edit" id="valuematter"> 0.00 </p>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <h6> Judgment Value <span> (USD):  </span> </h6> <p class="inline-edit" id="jugementmatter"> 0.00 </p>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <h6> Recovered Value <span> (USD):  </span> </h6> <p class="inline-edit" id="recoveredmatter"> 0.00 </p>
+                                        </div>
+                                    </div>-->
+                                    <hr/>
+                                    <div class="matter-custom-field">
+                                        <!--<span> Additional Fields  </span>-->
+                                        <div class="row">
+                                            <div class="col-md-2">
+                                                <p style="margin-top: 10px;"> field name: </p>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <p class="inline-edit" id="matter-custom-field"> <span class="edit-placeholder"> Click To Add </span>  </p>
+                                            </div>
+                                            <div class="col-md-2">
+                                                <p style="margin-top: 10px;"> field name:  </p>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <p class="inline-edit" id="matter-custom-field2"> Critical </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="main-content clearfix">
+                                <div class="main-content-header">
+                                    <h2 class="page-heading-title"> People In Contact  </h2>
+                                    <div class="setting-buttons">
+                                        <div class="btn-group">
+                                            <button type="button" class="btn btn-toggle-section" data-toggle="dropdown">Add <span class="caret"></span></button>
+                                            <ul class="dropdown-menu">
+                                                <li><a href="" data-toggle="modal" data-target="#mymodel"> Add Contact </a></li>
+                                                <li><a href="" data-toggle="modal" data-target="#mymodel"> Add Company  </a></li>
+                                                <li><a href="" data-toggle="modal" data-target="#mymodel"> Add Outsource </a></li>
+                                                <li><a href="" data-toggle="modal" data-target="#mymodel"> Add Contributor </a></li>
+                                            </ul>
+                                        </div>
+                                        <button class="btn btn-toggle-section btn-collpase"><i class="fa fa-angle-down"></i> </button>
+                                    </div>
+                                </div>
+                                <div class="main-content-body">
+                                    <div class="people-in-contact">
+                                        <ul class="nav nav-tabs">
+                                            <li class="active"><a data-toggle="tab" data-target="#contacts"> Contacts </a></li>
+                                            <li><a data-toggle="tab" data-target="#companies"> Companies </a></li>
+                                            <li><a data-toggle="tab" data-target="#outsourcing"> Outsourcing To Lawyers </a></li>
+                                            <li><a data-toggle="tab" data-target="#contributors"> Related Contributors </a></li>
+                                        </ul>
+                                        <div class="tab-content">
+                                            <div class="tab-pane active" id="contacts">
+                                                <div class="table-responsive">
+                                                    <table class="table table-bordered">
+                                                        <tr>
+                                                            <th> Contact Name</th>
+                                                            <th> Role </th>
+                                                            <th> Comment </th>
+                                                            <th> Actions </th>
+                                                        </tr>
+                                                        <tr>
+                                                            <td><a href=""> Ahmed Salman </a> </td>
+                                                            <td> <p class="inline-edit" id="role-1"> Co-defendant </p> </td>
+                                                            <td> <p class="inline-edit" id="role-11">  get a new values </p> </td>
+                                                            <td> 
+                                                                <button class="btn btn-notes-action" title="edit"> <i class="fa fa-edit"></i></button>
+                                                                <button class="btn btn-notes-action" title="delete"> <i class="fa fa-trash"></i></button>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td><a href=""> sameh anwar </a> </td>
+                                                            <td> <p class="inline-edit" id="role-2"> Co-Plaintiff </p> </td>
+                                                            <td> <p class="inline-edit" id="role-22"> get a new values </p> </td>
+                                                            <td> 
+                                                                <button class="btn btn-notes-action" title="edit"> <i class="fa fa-edit"></i></button>
+                                                                <button class="btn btn-notes-action" title="delete"> <i class="fa fa-trash"></i></button>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td><a href=""> ibrahim </a> </td>
+                                                            <td> <p class="inline-edit" id="role-3"> Opponent </p> </td>
+                                                            <td> <p class="inline-edit" id="role-33"> get a new values </p>  </td>
+                                                            <td> 
+                                                                <button class="btn btn-notes-action" title="edit"> <i class="fa fa-edit"></i></button>
+                                                                <button class="btn btn-notes-action" title="delete"> <i class="fa fa-trash"></i></button>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                            <div class="tab-pane" id="companies">
+                                                <div class="table-responsive">
+                                                    <table class="table table-bordered">
+                                                        <tr>
+                                                            <th> Comapny Name</th>
+                                                            <th> Role </th>
+                                                            <th> Comment </th>
+                                                            <th> Actions </th>
+                                                        </tr>
+                                                        <tr>
+                                                            <td><a href=""> infosysta </a> </td>
+                                                            <td> Defendant </td>
+                                                            <td> get a new values </td>
+                                                            <td> 
+                                                                <button class="btn btn-notes-action" title="edit"> <i class="fa fa-edit"></i></button>
+                                                                <button class="btn btn-notes-action" title="delete"> <i class="fa fa-trash"></i></button>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                            <div class="tab-pane" id="outsourcing">
+                                                <div class="table-responsive">
+                                                    <table class="table table-bordered">
+                                                        <tr>
+                                                            <th> External Lawer</th>
+                                                            <th> Role </th>
+                                                            <th> Comment </th>
+                                                            <th> Actions </th>
+                                                        </tr>
+                                                        <tr>
+                                                            <td><a href=""> john smith </a> </td>
+                                                            <td> Opponent Lawyer </td>
+                                                            <td> get a new values </td>
+                                                            <td> 
+                                                                <button class="btn btn-notes-action" title="edit"> <i class="fa fa-edit"></i></button>
+                                                                <button class="btn btn-notes-action" title="delete"> <i class="fa fa-trash"></i></button>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                            <div class="tab-pane" id="contributors">
+                                                <div class="table-responsive">
+                                                    <table class="table table-bordered">
+                                                        <tr>
+                                                            <th> contact Name</th>
+                                                            <th> Role </th>
+                                                            <th> Comment </th>
+                                                            <th> Added By </th>
+                                                            <th> Added On </th>
+                                                            <th> Actions </th>
+                                                        </tr>
+                                                        <tr>
+                                                            <td><a href=""> maichael john </a> </td>
+                                                            <td> dependent </td>
+                                                            <td> get a new values </td>
+                                                            <td> sameh anwar </td>
+                                                            <td> 2017-03-14 16:21:45 </td>
+                                                            <td> 
+                                                                <button class="btn btn-notes-action" title="edit"> <i class="fa fa-edit"></i></button>
+                                                                <button class="btn btn-notes-action" title="delete"> <i class="fa fa-trash"></i></button>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="main-content clearfix">
+                                <div class="main-content-header">
+                                    <h2 class="page-heading-title"> Activity  </h2>
+                                    <div class="setting-buttons">
+                                        <button class="btn btn-toggle-section btn-collpase"><i class="fa fa-angle-down"></i> </button>
+                                    </div>
+                                </div>
+                                <div class="main-content-body">
+                                    <div class="tabable">
+                                        <ul class="nav nav-tabs">
+                                            <li class="active"><a href="" data-target="#notes" data-toggle="tab"> Notes </a></li>
+                                            <li><a href="" data-target="#stages" data-toggle="tab"> Matter Stages </a></li>
+                                            <li><a href="" data-target="#audit" data-toggle="tab"> Audit Report </a></li>
+                                            <!--<li><a href="" data-target="#effort" data-toggle="tab"> Efforts </a></li>-->
+                                        </ul>
+                                        <div class="tab-content">
+                                            <div class="tab-pane active" id="notes">
+                                                <div class="notes-add-button pull-left">
+                                                    <button class="btn btn-add-action"> <i class="fa fa-plus"></i> </button>
+                                                </div>
+                                                <div class="expand-links"> 
+                                                    <span class="expand-button"><a href="" class="expand-btn"> Expand All </a></span> / 
+                                                    <span class="expand-button"><a href="" class="collapse-btn"> Collapse All </a></span> 
+                                                </div>
+                                                <div class="clearfix"></div>
+                                                <div class="user-notes-activity clearfix">
+                                                    <div class="user-notes clearfix">
+                                                        <div class="user-notes-header clearfix">
+                                                            <div class="col-md-2">
+                                                                <div class="user-photo"> 
+                                                                    <span class="audit-toogle"><i class="fa fa-angle-down"></i></span>
+                                                                    <img src="images/user.png" alt="" class="img-circle" />
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-3">
+                                                                <h3 class="user-name"> Mohamed Dekmak  </h3>
+                                                            </div>
+                                                            <div class="col-md-7">
+                                                                <div class="user-notes-meta" style='background: #eee;color: #fff;padding:0px 25px;border-radius: 25px;'>
+                                                                    <p><i class="fa fa-angle-double-right"></i> <span style='background: #3399ff;color: #fff;padding: 3px 10px;color: #fff;border-radius: 25px;display: inline-block;margin-right:10px; '> added a note on </span> 2018-02-13 19:20 </p>
+                                                                </div>
+                                                                <button class="btn btn-notes-action" data-toggle="modal" data-target="#auditModal"> <i class="fa fa-edit"></i></button>
+                                                                <button class="btn btn-notes-action confirm"> <i class="fa fa-trash"></i></button>
+                                                            </div>
+                                                        </div>
+                                                        <div class="user-notes-body">
+                                                            <div class="user-notes-comment">
+                                                                <p> reviewed by mohamed </p>
+                                                            </div>
+                                                            <div class="user-notes-replay">
+                                                                <p> Modified by <a href="">sameh anwar</a> on behalf of <a href="">Mohamad Dekmak</a> </p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="user-notes clearfix">
+                                                        <div class="user-notes-header clearfix">
+                                                            <div class="col-md-2">
+                                                                <div class="user-photo"> 
+                                                                    <span class="audit-toogle"><i class="fa fa-angle-down"></i></span>
+                                                                    <img src="images/user.png" alt="" class="img-circle" />
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-3">
+                                                                <h3 class="user-name"> Sameh Anwar  </h3>
+                                                            </div>
+                                                            
+                                                            <div class="col-md-7">
+                                                                <div class="user-notes-meta" style='background: #eee;color: #fff;padding:0px 25px;border-radius: 25px;'>
+                                                                    <p><i class="fa fa-angle-double-right"></i> <span style='background: #3399ff;color: #fff;padding: 3px 10px;color: #fff;border-radius: 25px;display: inline-block;margin-right:10px; '> added a note on </span> 2018-01-13 19:20 </p>
+                                                                </div>
+                                                                <button class="btn btn-notes-action" data-toggle="modal" data-target="#auditModal"> <i class="fa fa-edit"></i></button>
+                                                                <button class="btn btn-notes-action confirm"> <i class="fa fa-trash"></i></button>
+                                                            </div>
+                                                        </div>
+                                                        <div class="user-notes-body">
+                                                            <div class="user-notes-comment">
+                                                                <p> done by sameh </p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="records-count">
+                                                        <p> Total Records: 2 </p> 
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="tab-pane" id="stages">
+                                                <div class="config-buttons clearfix">
+                                                    <button class="btn btn-icon-action" title="Export To Excel"><i class="fa fa-file-excel-o"></i> </button>
+                                                </div>
+                                                <div class="table-responsive">
+                                                    <table class="table table-bordered">
+                                                        <tr>
+                                                            <th> Matter Stage </th>
+                                                            <th> In this Stage for [days] </th>
+                                                            <th> Moved on </th>
+                                                            <th> Moved by </th>
+                                                            <th> actions </th>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Execution</td>
+                                                            <td>0</td>
+                                                            <td>2018-02-13</td>
+                                                            <td>Mohamad Dekmak</td>
+                                                            <td>
+                                                                <button class="btn btn-notes-action" data-toggle="tooltip" data-placement="top" title="edit"> <i class="fa fa-edit"></i></button>
+                                                                <button class="btn btn-notes-action" data-toggle="tooltip" data-placement="top" title="delete"> <i class="fa fa-trash"></i></button>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>المرحلة الإبتدائية	</td>
+                                                            <td>0</td>
+                                                            <td>2018-02-13</td>
+                                                            <td>Mohamad Dekmak</td>
+                                                            <td>
+                                                                <button class="btn btn-notes-action"> <i class="fa fa-edit"></i></button>
+                                                                <button class="btn btn-notes-action"> <i class="fa fa-trash"></i></button>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Dispute</td>
+                                                            <td>0</td>
+                                                            <td>2018-02-13</td>
+                                                            <td>Mohamad Dekmak</td>
+                                                            <td>
+                                                                <button class="btn btn-notes-action"> <i class="fa fa-edit"></i></button>
+                                                                <button class="btn btn-notes-action"> <i class="fa fa-trash"></i></button>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Execution</td>
+                                                            <td>0</td>
+                                                            <td>2018-02-13</td>
+                                                            <td>Mohamad Dekmak</td>
+                                                            <td>
+                                                                <button class="btn btn-notes-action"> <i class="fa fa-edit"></i></button>
+                                                                <button class="btn btn-notes-action"> <i class="fa fa-trash"></i></button>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                            <div class="tab-pane" id="audit">
+                                                <div class="config-buttons clearfix">
+                                                    <button class="btn btn-icon-action" title="Export To Excel"><i class="fa fa-file-excel-o"></i> </button>
+                                                </div>
+                                                <div class="audit-log-table">
+                                                    <div class="audit-log-header clearfix">
+                                                        <div class="circle-log"></div>
+                                                        <div class="audit-log-username"> Mohamed Dekmak </div>
+                                                    </div>
+                                                    
+                                                    <div class="audit-log-comment clearfix">
+                                                        <div class="audit-log-calendar">
+                                                            <span><i class="fa fa-calendar"></i>  2017-02-27 14:54</span>
+                                                        </div>
+                                                        <div class="audit-log-changes"> 
+                                                            <p> field name <span style="font-weight: bold;"> Area Of Practice </span> has been changed </p>
+                                                        </div>
+                                                        <div class="audit-log-changes">
+                                                            <div class="table-responsive">
+                                                                <table class="table">
+                                                                    <tr>
+                                                                        <th> Old Value </th>
+                                                                        <th> New Value </th>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td> <p> Civil </p> </td>
+                                                                        <td> <p> Consultation </p> </td>
+                                                                    </tr>
+                                                                </table>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    
+                                                    <div class="audit-log-comment clearfix">
+                                                        <div class="audit-log-calendar">
+                                                            <span><i class="fa fa-calendar"></i>  2018-08-20 14:54</span>
+                                                        </div>
+                                                        <div class="audit-log-changes"> 
+                                                            <p> field name <span style="font-weight: bold;"> Matter Status </span> has been changed </p>
+                                                        </div>
+                                                        <div class="audit-log-changes">
+                                                            <div class="table-responsive">
+                                                                <table class="table">
+                                                                    <tr>
+                                                                        <th> Old Value </th>
+                                                                        <th> New Value </th>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td> <p> Closed </p> </td>
+                                                                        <td> <p> global1 </p> </td>
+                                                                    </tr>
+                                                                </table>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+
+                </div>
+            </div>
+            
+            <div class="left-sidebar-nav sidebar-nav-collapse">
+                <ul>
+                    <li class="active" data-aos="fade-right" data-container="body" data-toggle="popover" data-placement="right" data-content="Matter"><a href="index.html"><i class="fa fa-align-center"></i><span class="text-hidden">  Matter  </span></a></li>
+                    <li data-aos="fade-right" data-container="body" data-toggle="popover" data-placement="right" data-content="Related Tasks"><a href="related-tasks.html" ><i class="fa fa-copy"></i><span class="text-hidden">   Related Tasks </span> </a></li>
+                    <li data-aos="fade-right" data-container="body" data-toggle="popover" data-placement="right" data-content="Reminders"><a href=""><i class="fa fa-bell"></i><span class="text-hidden"> Reminders </span></a></li>
+                    <li data-aos="fade-right" data-container="body" data-toggle="popover" data-placement="right" data-content="Related Documents"><a href=""><i class="fa fa-file"></i><span class="text-hidden"> Related Documents </span></a></li>
+                    <li data-aos="fade-right" data-container="body" data-toggle="popover" data-placement="right" data-content="Expenses"><a href=""><i class="fa fa-money"></i><span class="text-hidden"> Expenses </span></a></li>
+                    <li data-aos="fade-right" data-container="body" data-toggle="popover" data-placement="right" data-content="Time Logs"><a href=""><i class="fa fa-clock-o"></i><span class="text-hidden"> Time Logs </span></a></li>
+                </ul>
+                <button class="btn btn-default" id="left-sidebar-toggle"><i class="fa fa-align-left"></i></button>
+            </div>
+        </section>
+        
+        <a href="#0" class="app-top"><i class="fa fa-angle-up"></i></a>
+              
+
+    <script src="js/jquery-1.11.0.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/smoothscroll.min.js"></script>
+    <script src="plugins/owlcarousel/owl.carousel.min.js"> </script>
+    <script src="js/moment.js"></script>
+    <script src="plugins/bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js"></script>
+    <script src="plugins/summernote/dist/summernote.js"></script>
+    <script src="plugins/bootstrap-select/dist/js/bootstrap-select.js"></script>
+    <script src="plugins/typeahead.js/dist/typeahead.jquery.min.js"></script>
+    <script src="plugins/typeahead.js/dist/bloodhound.min.js"></script>
+    <script src="plugins/typeahead.js/dist/typeahead.bundle.min.js"></script>
+    <script src="plugins/aos/aos.js"></script>
+    <script src="js/inlinedit.js" type="text/javascript"></script>
+    <script src="js/functions.js"></script>
+    <script src="js/matter-edit-form.js" type="text/javascript"></script>
+    </body>
+</html>

@@ -1,0 +1,3 @@
+@function hovering($color,$opacity){
+    @return  rgba($color,$opacity);
+}

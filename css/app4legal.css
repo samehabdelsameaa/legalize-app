@@ -1,0 +1,166 @@
+/* app4legal  */
+/* vendor prefixes */
+body {
+  background: #dedede; }
+
+.navbar-inverse {
+  background: #205081; }
+  .navbar-inverse .navbar-brand {
+    padding-bottom: 10px; }
+    .navbar-inverse .navbar-brand img {
+      width: 170px;
+      display: block;
+      margin: -4px 40px 0px 0px; }
+  .navbar-inverse #main-nav ul li {
+    padding: 4px 7px; }
+    .navbar-inverse #main-nav ul li a {
+      color: #f7f7f7; }
+    .navbar-inverse #main-nav ul li:hover {
+      background: #428bca; }
+  .navbar-inverse .dashboard-icons span {
+    color: #f7f7f7;
+    vertical-align: middle;
+    background: #205081;
+    padding: 16.5px 15px;
+    font-size: 18px;
+    cursor: pointer;
+    display: inline-block; }
+    .navbar-inverse .dashboard-icons span:hover {
+      background: #428bca; }
+
+.navbar-default {
+  background: #f7f7f7;
+  margin: 15px 19px 35px; }
+  .navbar-default ul li {
+    padding: 4px 15px; }
+    .navbar-default ul li a {
+      color: #f7f7f7;
+      background: transparent; }
+    .navbar-default ul li:hover, .navbar-default ul li.active {
+      border-bottom: 3px solid #1c64dc; }
+
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
+  background: transparent; }
+
+.heading-page {
+  clear: both;
+  margin-bottom: 40px;
+  margin-right: 35px;
+  margin-left: 35px; }
+  .heading-page .page-heading-buttons {
+    margin-top: -60px;
+    margin-bottom: 20px;
+    padding: 10px;
+    display: inline-block;
+    float: right;
+    vertical-align: middle; }
+  .heading-page h2 {
+    display: inline-block;
+    font-size: 24px; }
+  .heading-page span {
+    display: block;
+    font-size: 14px; }
+  .heading-page .btn-add-action {
+    margin-right: 10px;
+    color: #fff;
+    border: none;
+    padding: 10px 45px;
+    background: #1c64dc; }
+    .heading-page .btn-add-action:hover {
+      background: rgba(28, 100, 220, 0.6); }
+  .heading-page .btn-add-action-default {
+    border-radius: 25px;
+    float: right;
+    color: #fff;
+    border: none;
+    padding: 10px 45px;
+    background: rgba(153, 153, 153, 0.8); }
+    .heading-page .btn-add-action-default:hover {
+      background: rgba(153, 153, 153, 0.8); }
+
+.main-content, .right-sidebar {
+  background: #fff;
+  padding: 3%;
+  box-shadow: 0.5px 0.5px 1px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 0.5px 0.5px 1px rgba(0, 0, 0, 0.3); }
+
+.right-sidebar {
+  margin-bottom: 20px;
+  padding: 0;
+  margin-right: 3%; }
+  .right-sidebar .form-group {
+    margin: 8%; }
+  .right-sidebar .right-sidebar-header {
+    background: #f7f7f7;
+    /*padding: 7px 20px;*/
+    margin-bottom: 15px; }
+    .right-sidebar .right-sidebar-header h3 {
+      margin: 0px;
+      padding: 0px;
+      font-size: 21px; }
+      .right-sidebar .right-sidebar-header h3 span {
+        background: #dedede;
+        display: inline-block;
+        padding: 10px 20px;
+        margin-right: 7px; }
+  .right-sidebar label {
+    display: inline;
+    font-weight: normal;
+    float: left; }
+  .right-sidebar input.form-control {
+    height: 40px;
+    display: inline; }
+
+section.page-content {
+  height: 100%;
+  background: #dedede; }
+  section.page-content .content {
+    padding: 3%;
+    width: 100%;
+    float: right;
+    position: relative;
+    background: #dedede; }
+    section.page-content .content .content-wrapper {
+      background: transparent;
+      padding: 30px; }
+      section.page-content .content .content-wrapper h2.page-heading-title {
+        margin: 0px;
+        display: inline-block;
+        font-size: 20px;
+        border-bottom: 3px solid #1c64dc;
+        padding-bottom: 8px; }
+      section.page-content .content .content-wrapper .form-conatiner .form-controls:first-of-type {
+        border-right: 1px solid #dedede;
+        padding-right: 30px; }
+      section.page-content .content .content-wrapper .form-conatiner .form-controls label {
+        display: inline;
+        font-weight: normal;
+        float: left; }
+      section.page-content .content .content-wrapper .form-conatiner .form-controls input.form-control {
+        height: 40px;
+        display: inline; }
+  section.page-content .sidebar-nav {
+    position: fixed;
+    top: 9%;
+    background: #fff;
+    width: 6%;
+    padding: 0px;
+    height: 100%; }
+    section.page-content .sidebar-nav ul {
+      list-style: none;
+      padding: 0px;
+      margin: 0px; }
+      section.page-content .sidebar-nav ul li {
+        display: blok;
+        padding: 20px 20px;
+        border-bottom: 1px solid rgba(222, 222, 222, 0.6); }
+        section.page-content .sidebar-nav ul li a i.fa {
+          font-size: 20px;
+          text-align: center;
+          color: #666;
+          display: inline-block; }
+
+/*
+* Media Queries
+*
+*/

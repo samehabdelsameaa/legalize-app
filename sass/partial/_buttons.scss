@@ -1,0 +1,36 @@
+@import 'partial/variables';
+@import 'partial/functions';
+@import 'partial/mixins';
+
+.btn-is-cta{
+    border-radius: 30px;
+    padding: 20px 55px;
+    text-align: center;
+    background:$app4l-helper-color;
+    border: 1px solid #fff;
+    margin: 0px 10px;
+    border:none;
+    &:hover{
+        background: rgba($app4l-helper-color,0.8);
+        color: #fff;
+    }
+}
+
+.btn-is-feature{
+    border-radius: 30px;
+    padding: 20px 55px;
+    text-align: center;
+    background:$app4l-primary-color;
+    border: 1px solid #fff;
+    margin: 0px 5px;
+    display:inline-block;
+    &:hover{
+        background: #fff;
+        color: #333;
+        border: 1px solid $app4l-primary-color;;
+    }
+    &:focus{
+        outline: none;
+        border: none;
+    }
+}

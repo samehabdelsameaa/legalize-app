@@ -1,0 +1,18 @@
+/* app4legal  */
+@import 'partial/variables';
+
+.input-form-wrapper{
+    .bootstrap-select{
+        ul{
+            li{
+                &.active{
+                    span{
+                        &.text{
+                            color: #fff !important;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
